@@ -991,7 +991,8 @@ namespace Oculus.Avatar
                 return false;
             }
 
-            component.renderComponent = MarshalRenderComponent<ovrAvatarBaseComponent>(ptr);
+            int renderComponentOffset = Marshal.SizeOf(typeof(ovrAvatarBaseComponent)) - Marshal.SizeOf(typeof(IntPtr));
+            component.renderComponent = Marshal.ReadIntPtr(ptr, renderComponentOffset);
             return true;
         }
 

@@ -107,6 +107,7 @@ namespace Oculus.Platform
       IAP_GetNextPurchaseArrayPage                        = 0x47570A95,
       IAP_GetProductsBySKU                                = 0x7E9ACAF5,
       IAP_GetViewerPurchases                              = 0x3A0F8419,
+      IAP_GetViewerPurchasesDurableCache                  = 0x63599E2B,
       IAP_LaunchCheckoutFlow                              = 0x3F9B0D0D,
       LanguagePack_GetCurrent                             = 0x1F90F0D5,
       LanguagePack_SetCurrent                             = 0x5B4FBBE0,
@@ -530,6 +531,7 @@ namespace Oculus.Platform
 
         case Message.MessageType.IAP_GetNextPurchaseArrayPage:
         case Message.MessageType.IAP_GetViewerPurchases:
+        case Message.MessageType.IAP_GetViewerPurchasesDurableCache:
           message = new MessageWithPurchaseList(messageHandle);
           break;
 

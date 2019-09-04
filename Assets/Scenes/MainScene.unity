@@ -2237,6 +2237,7 @@ MonoBehaviour:
   From: 1.8
   To: 1.83
   Duration: 3
+  Camera: {fileID: 1736789015}
 --- !u!4 &1514306711
 Transform:
   m_ObjectHideFlags: 0
@@ -2368,6 +2369,12 @@ RectTransform:
 --- !u!1 &1736789014 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: 126d619cf4daa52469682f85c1378b4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1975097533}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1736789015 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400002, guid: 126d619cf4daa52469682f85c1378b4a,
     type: 3}
   m_PrefabInstance: {fileID: 1975097533}
   m_PrefabAsset: {fileID: 0}

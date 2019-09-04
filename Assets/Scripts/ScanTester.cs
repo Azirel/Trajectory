@@ -10,6 +10,7 @@ public class ScanTester : MonoBehaviour
 	[SerializeField] protected float From;
 	[SerializeField] protected float To;
 	[SerializeField] protected float Duration;
+	[SerializeField] Transform Camera;
 
 	[ContextMenu("LaunchScanWave")]
 	public void LaunchScanWave()
@@ -30,5 +31,6 @@ public class ScanTester : MonoBehaviour
 	{
 		if (Input.GetKeyDown(KeyCode.Space))
 			LaunchScanWave();
+		ScannerMaterial.SetVector("_WorldSpaceScannerPos", Camera.position);
 	}
 }

@@ -20,6 +20,9 @@ namespace Oculus.Platform
       Cal_FinalizeApplication                       = 0x1DA9CBD5,
       Cal_GetSuggestedApplications                  = 0x56707015,
       Cal_ProposeApplication                        = 0x4E83F2DD,
+      Colocation_GetCurrentMapUuid                  = 0x34557EB2,
+      Colocation_RequestMap                         = 0x3215666D,
+      Colocation_ShareMap                           = 0x186DC4DD,
       GraphAPI_Get                                  = 0x30FF006E,
       GraphAPI_Post                                 = 0x76A5A7C4,
       HTTP_Get                                      = 0x6FB63223,
@@ -83,6 +86,8 @@ namespace Oculus.Platform
 
         case MessageTypeInternal.Application_ExecuteCoordinatedLaunch:
         case MessageTypeInternal.Cal_ProposeApplication:
+        case MessageTypeInternal.Colocation_RequestMap:
+        case MessageTypeInternal.Colocation_ShareMap:
         case MessageTypeInternal.Livestreaming_StopPartyStream:
         case MessageTypeInternal.Livestreaming_UpdateMicStatus:
         case MessageTypeInternal.Party_Leave:
@@ -153,6 +158,7 @@ namespace Oculus.Platform
           break;
 
         case MessageTypeInternal.Avatar_UpdateMetaData:
+        case MessageTypeInternal.Colocation_GetCurrentMapUuid:
         case MessageTypeInternal.GraphAPI_Get:
         case MessageTypeInternal.GraphAPI_Post:
         case MessageTypeInternal.HTTP_Get:

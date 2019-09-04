@@ -26,7 +26,7 @@ namespace UnityEngine.Rendering.LWRP
 #if UNITY_EDITOR
 			settings.Material.EnableKeyword("UNITY_EDITOR");
 #else
-			settings.blitMaterial.DisableKeyword("UNITY_EDITOR");
+			settings.Material.DisableKeyword("UNITY_EDITOR");
 #endif
 		}
 

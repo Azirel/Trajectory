@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PredictionScene.unity
     guid: 1d9277a99e9d75f43985399d5be46685
+  - enabled: 0
+    path: Assets/Oculus/SampleFramework/Usage/DistanceGrab.unity
+    guid: 24f58b3f0ca02d44eaec7f50bca538f2
   m_configObjects: {}
