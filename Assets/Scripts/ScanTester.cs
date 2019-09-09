@@ -10,7 +10,8 @@ public class ScanTester : MonoBehaviour
 	[SerializeField] protected float From;
 	[SerializeField] protected float To;
 	[SerializeField] protected float Duration;
-	[SerializeField] Transform Camera;
+	[SerializeField] protected Transform LeftCameraEye;
+	[SerializeField] protected Transform RightCameraEye;
 
 	[ContextMenu("LaunchScanWave")]
 	public void LaunchScanWave()
@@ -29,8 +30,9 @@ public class ScanTester : MonoBehaviour
 
 	protected void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Space))
+		ScannerMaterial.SetVector("_WorldSpaceLeftScannerPos", LeftCameraEye.position);
+		ScannerMaterial.SetVector("_WorldSpaceRightScannerPos", RightCameraEye.position);
+		if (Input.GetKeyDown(KeyCode.Space) || OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch))
 			LaunchScanWave();
-		ScannerMaterial.SetVector("_WorldSpaceScannerPos", Camera.position);
 	}
 }

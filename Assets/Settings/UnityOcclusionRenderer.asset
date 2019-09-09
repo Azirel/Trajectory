@@ -129,7 +129,7 @@ MonoBehaviour:
     EventOffset: 0
     Material: {fileID: 2100000, guid: 2457594be3aeed441bac6d8cd4bf9ec8, type: 2}
     BlitMaterialPassIndex: 0
-    FilterMode: 0
+    FilterMode: 1
     isBlit: 1
 --- !u!114 &5267260448455142844
 MonoBehaviour:
@@ -150,4 +150,4 @@ MonoBehaviour:
     blitMaterialPassIndex: 0
     FilterMode: 0
     Strenght: 2
-    isBlit: 0
+    isBlit: 1

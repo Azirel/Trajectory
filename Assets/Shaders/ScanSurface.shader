@@ -45,7 +45,8 @@
 					UNITY_VERTEX_OUTPUT_STEREO
 				};
 
-				half4 _WorldSpaceScannerPos;
+				half4 _WorldSpaceLeftScannerPos;
+				half4 _WorldSpaceRightScannerPos;
 				half _ScanDistance;
 				half _ScanWidth;
 				half _LeadSharp;
@@ -94,7 +95,7 @@
 					half4 wsDir = linearDepth * input.interpolatedRay;
 					half3 wsPos = _WorldSpaceCameraPos + wsDir;
 					half4 scannerCol = 0;
-					half dist = distance(wsPos, _WorldSpaceScannerPos);
+					half dist = distance(wsPos, unity_StereoEyeIndex == 0 ? _WorldSpaceLeftScannerPos : _WorldSpaceRightScannerPos);
 					if (dist < _ScanDistance && dist > _ScanDistance - _ScanWidth && linearDepth < 1)
 					{
 						float diff = 1 - (_ScanDistance - dist) / (_ScanWidth);
